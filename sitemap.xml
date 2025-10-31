@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="https://www.w3.org/1999/xhtml">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
     <loc>https://adilnvm.github.io/</loc>
     <lastmod>2025-10-31</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Add subpages if you ever have more -->
-  <!--
   <url>
     <loc>https://adilnvm.github.io/projects</loc>
     <lastmod>2025-10-31</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  -->
+
+  <url>
+    <loc>https://adilnvm.github.io/contact</loc>
+    <lastmod>2025-10-31</lastmod>
+    <priority>0.5</priority>
+  </url>
 
 </urlset>
