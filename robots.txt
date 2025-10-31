@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adilnvm.github.io/sitemap.xml
