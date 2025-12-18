@@ -4477,3 +4477,20 @@ td:last-child {
     object-fit: cover;
     border-radius: 8px;
 }
+
+.company-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.company-logo {
+    height: 98px;      /* ← this fixes the issue */
+    width: auto;
+    object-fit: contain;
+}
+@media screen and (max-width: 600px) {
+    #works .entry__thumb img {
+        height: 300px;   /* adjust height for smaller screens */
+    }
+}
