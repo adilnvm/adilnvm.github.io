@@ -400,7 +400,7 @@
             </div> <!-- s-intro__content-media -->                
 
             <div class="s-intro__btn-download">
-                <u><a class="btn btn--stroke" href="./resources/Adil_Iqbal_Dec.pdf" target="_blank">Get My Resume</a></u>
+                <u><a class="btn btn--stroke" href="./resources/Adil-Resume-Apr.pdf" target="_blank">Get My Resume</a></u>
             </div> <!-- end s-intro__btn-downlod -->
             
             <div class="s-intro__scroll-down">
@@ -586,6 +586,14 @@
                                 <br> 
                                 <li>
                                     <a href="#0">
+ <a style="color: inherit; text-decoration: none;" href= "https://raw.githubusercontent.com/adilnvm/adilnvm.github.io/refs/heads/main/images/folio/sies-hackathon.jpeg" target="_blank">
+                                        Hackathon 1st Position Certificate
+</a>
+                                        <span>SIES College</span>
+                                    </a>                                        
+                                </li>
+                                <li>
+                                    <a href="#0">
  <a style="color: inherit; text-decoration: none;" href= "https://www.sololearn.com/certificates/CT-AJISZMSK" target="_blank">
                                         SQL Certificate
 </a>
@@ -625,7 +633,7 @@
         </span>
         <br>
         <span class="duration">
-            Sep 2025 – Present <br> Navi Mumbai, India
+            Sep – Dec 2025 <br> Navi Mumbai, India
         </span>
     </div>
 
@@ -704,30 +712,12 @@
       <strong>VoiceMap</strong> is an interactive civic mapping platform combining spatial datasets 
       (states, districts, constituencies, pincodes) with representative contact information.  
       Users can find their constituency by pincode, district, or name and view their MP/CM details.
+      <br>
+                    <a href="https://github.com/adilnvm/voicemap" target="_blank" rel="noopener noreferrer">Github Repo</a> 
+                   
     </p>
 
-    <h5>What I built</h5>
-    <ul>
-      <li>Fast client-side rendering using Mapbox GL + static GeoJSON.</li>
-      <li>Pincode-first search with centroid jumping & prefix suggestions.</li>
-      <li>Authority mapping pipeline (OCR + fuzzy match + data cleaning).</li>
-      <li>Optimized geo imports & 2dsphere index queries.</li>
-    </ul>
-
-    <h5>My Role</h5>
-    <p>Design + Full-stack development (data ingestion, backend APIs, frontend map UX, search logic).</p>
-
-    <h5>Challenges & Solutions</h5>
-    <ul>
-      <li>Performance vs accuracy → static geo tiles + DB only for lookups.</li>
-      <li>Messy authority data → custom cleaning + validation workflow.</li>
-      <li>Pincode UX → fast numeric auto-detection for accuracy.</li>
-    </ul>
-
-    <h5>Images Used</h5>
-    <p>
-      <code>voicemap1.png</code> (map) and <code>voicemap2.png</code> (panel).
-    </p>
+    
   </div>
 </div>
 <!-- Voicemap — Spatial civic mapping & authority dashboard (Top project) -->
@@ -751,35 +741,93 @@
 
   <div class="glightbox-desc entry__desc-voicemap">
     <p>
-      <strong>VoiceMap</strong> is an interactive civic mapping platform combining spatial datasets 
-      (states, districts, constituencies, pincodes) with representative contact information.  
-      Users can find their constituency by pincode, district, or name and view their MP/CM details.
+      <strong>VoiceMap</strong> would act like a "Grievance Redressal System".
+      <br>
+      <a href="https://github.com/adilnvm/voicemap" target="_blank" rel="noopener noreferrer">Github Repo</a> 
     </p>
+    
+    
+</div>
+</div>
+<!-- Workflow Executor — Telecom Support Engine (Jio Internship Project) -->
+<div class="column entry">
+  <a href="images/folio/WorkFlow-Executor-architecture.png" class="entry__link glightbox"
+     data-glightbox="title: Telecom Workflow Executor; description: .entry__desc-workflow">
+    
+    <div class="entry__thumb">
+      <img loading="lazy" 
+           src="images/folio/WorkFlow-Executor-architecture.png"
+           alt="Workflow Executor System Architecture">
+    </div>
 
-    <h5>What I built</h5>
-    <ul>
-      <li>Fast client-side rendering using Mapbox GL + static GeoJSON.</li>
-      <li>Pincode-first search with centroid jumping & prefix suggestions.</li>
-      <li>Authority mapping pipeline (OCR + fuzzy match + data cleaning).</li>
-      <li>Optimized geo imports & 2dsphere index queries.</li>
-    </ul>
+    <div class="entry__info">
+      <h4 class="entry__title">
+        Workflow Executor<br>(LLM-Assisted Telecom Support Engine) - Architecture
+      </h4>
+      <div class="entry__cat">
+        FastAPI • Pydantic • Redis • LLM Routing • Slot-Based Execution • State Machine • Observability
+      </div>
+    </div>
+  </a>
 
-    <h5>My Role</h5>
-    <p>Design + Full-stack development (data ingestion, backend APIs, frontend map UX, search logic).</p>
-
-    <h5>Challenges & Solutions</h5>
-    <ul>
-      <li>Performance vs accuracy → static geo tiles + DB only for lookups.</li>
-      <li>Messy authority data → custom cleaning + validation workflow.</li>
-      <li>Pincode UX → fast numeric auto-detection for accuracy.</li>
-    </ul>
-
-    <h5>Images Used</h5>
+  <div class="glightbox-desc entry__desc-workflow">
     <p>
-      <code>voicemap1.png</code> (map) and <code>voicemap2.png</code> (panel).
+      Built a <u>deterministic workflow execution engine</u> for telecom support systems during my internship at <u>Jio Platforms</u>.  
+      Unlike traditional chatbots, the system uses an LLM strictly for <u>intent classification and decision routing</u>, while all execution is handled through auditable backend workflows.
+      <br><br>
+
+      Key engineering highlights:
+      <br>• Slot-based execution gating (asks only required info)
+      <br>• Persistent ticket lifecycle with rollback safety
+      <br>• Hybrid storage (Redis + in-memory fallback)
+      <br>• Deterministic workflows for network, billing, recharge & device issues
+      <br>• Observability + metrics tracking for system evaluation
+      <br><br>
+
+      Designed as a <u>state-machine driven system</u> prioritizing correctness, reliability, and production safety over generative responses.
+      <br><br>
+
+      <a href="https://github.com/adilnvm/Workflow-Executor" target="_blank" rel="noopener noreferrer">
+        Github Repo
+      </a>
     </p>
   </div>
 </div>
+<!-- Workflow Executor – Execution Flow -->
+<div class="column entry">
+  <a href="images/folio/metrics snapshot.png" class="entry__link glightbox"
+     data-glightbox="title: Workflow Execution Model; description: .entry__desc-workflow2">
+    
+    <div class="entry__thumb">
+      <img loading="lazy" src="images/folio/metrics snapshot.png" alt="Metrics snapshot of the workflow execution">
+    </div>
+
+    <div class="entry__info">
+      <h4 class="entry__title">
+        Workflow Executor<br> <u>Metric</u> Snapshot of the Workflow Execution
+      </h4>
+      <div class="entry__cat">
+        Ticket State • Slot Filling • LLM Routing • Fault Tolerance
+      </div>
+    </div>
+  </a>
+
+  <div class="glightbox-desc entry__desc-workflow2">
+    <p>
+      Implements a structured <u>ticket lifecycle system</u> with state persistence and rollback.
+      Ensures reliable execution even during LLM or infrastructure failures.
+    
+    <br><br>
+
+      <a href="https://github.com/adilnvm/Workflow-Executor" target="_blank" rel="noopener noreferrer">
+        Github Repo
+      </a>
+    </p>
+
+  </div>
+</div>
+
+
 
         <!-- E-commerce Full Stack App -->
         <div class="column entry">
@@ -803,7 +851,7 @@
                     Admins can perform full CRUD operations (create, update, delete, manage inventory) via a dedicated dashboard.  
                     <br>
                     <a href="https://mystore-v2na.onrender.com/" target="_blank" rel="noopener noreferrer">View Demo</a> |
-                    <a href="https://github.com/adilnvm/jpl-project" target="_blank" rel="noopener noreferrer">Source Code</a>
+
                 </p>
             </div>
         </div>
@@ -1029,8 +1077,7 @@
             <li>Philology</li>
             <li>Philosophy</li>
             <li>Mathematics</li>
-            <li>Urdu & Hindi Literature</li>
-            <li>Volleyball</li>
+            <li>Atheletics & Sports</li>
         </ul>
     </div>
     <br>
@@ -1109,7 +1156,7 @@
                 </div>
           
                 <div class="column xl-6 tab-12">                    
-                    <a href="./resources/Adil_Iqbal_Dec.pdf"   class="btn btn--stroke btn--large u-fullwidth" target="_blank" download>Get My Resume</a>
+                    <a href="./resources/Adil-Resume-Apr.pdf"   class="btn btn--stroke btn--large u-fullwidth" target="_blank" download>Get My Resume</a>
                 </div>
             
             </div> <!-- end section-footer__buttons -->              
@@ -1186,6 +1233,7 @@
                     <p class="ss-copyright">
                         <span>© Copyright Hudson 2023</span> 
                         <span>Design by <a href="https://styleshout.com/">StyleShout</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a></span>
+                        <span>Fine-Tuned by <a href="https://github.com/adilnvm"><u>Adil IQBAL</u></a></span>
                     </p>
                 </div>
 
