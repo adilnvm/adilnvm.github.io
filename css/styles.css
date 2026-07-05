@@ -4494,5 +4494,109 @@ td:last-child {
         height: 300px;   /* adjust height for smaller screens */
     }
 }
+.edu-item{
+    position: relative;
+    display: flex;
+    gap: 24px;
+    padding-bottom: 36px;
+    align-items: flex-start;
+}
 
+/* Left column */
+.edu-marker{
+    width: 60px;
+    flex-shrink: 0;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Year */
+.edu-year{
+    position: static;          /* remove absolute */
+    transform: none;
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #666;
+    line-height: 1;
+}
+
+/* Logo */
+.edu-logo{
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.edu-content{
+    flex: 1;
+    padding-top: 0;
+}
+
+.edu-degree{
+    margin: 0;
+    line-height: 1.25;
+}
+
+.edu-item{
+    position: relative;
+    display: flex;
+    gap: 24px;
+    padding-bottom: 40px;
+    align-items: flex-start;
+}
+
+/* Vertical timeline */
+.edu-item:not(:last-child)::before{
+    content: "";
+    position: absolute;
+
+    left: 29px;          /* Center of the 60px marker column */
+
+    top: 62px;           /* Starts just below the logo */
+
+    bottom: -40px;
+
+    width: 2px;
+
+    background: #d8dce3;
+
+    z-index: 0;
+}
+
+/* Keep logo above the line */
+.edu-marker{
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.edu-logo{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;   /* hides the line behind transparent logos */
+    z-index: 2;
+}
+
+.edu-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
