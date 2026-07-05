@@ -426,16 +426,17 @@
                         <h2 class="text-display-title">About Me.</h2>
                     </div> <!-- end section-header -->
 
-                    <p class="attention-getter">
-                        I am Adil Iqbal (adilnvm), a Computer Science student and backend-focused developer from Mumbai, passionate about designing secure and scalable systems. My experience includes building full-stack applications using the MERN stack and working on enterprise-level backend projects using JAVA - SpringBoot at Jio Platforms Limited, where I gained hands-on exposure to Calling as a Service (CAAS), Call Masking, and microservices architecture. I also have practical knowledge of Git, Python, Linux, SQL, and Postman, with growing interest in cloud technologies and DevOps.
-                    </p>
-
-                    <p class="attention-getter">
-                        I enjoy solving real-world problems through clean code and efficient system design. 
-                        Driven by curiosity and collaboration, 
-                        I actively participate in technical projects and learnings 
-                        to apply and expand my skills. My goal is to build reliable backend solutions that enhance user privacy,
-                         scalability, and performance in modern applications.
+<p class="attention-getter">
+                        I am Adil Iqbal (adilnvm), a Computer Science student and backend-focused developer from Mumbai,
+                         passionate about designing secure and scalable systems. I'm currently working as a Service Engineer 
+                         at Zifup (Sellergize WTS), where I write and debug JavaScript for a shopping-focused
+                          browser — handling DOM extraction, Shadow DOM, and MutationObservers across dozens of e-commerce sites
+                           to power features like unified order history and automatic coupon testing. 
+                           My experience also includes building full-stack applications using the MERN stack 
+                           and working on enterprise-level backend projects using JAVA - SpringBoot at Jio Platforms Limited,
+                            where I gained hands-on exposure to Calling as a Service (CAAS), Call Masking,
+                             and microservices architecture. 
+                             I also have practical knowledge of Git, Python, Linux, SQL, and Postman, with growing interest in cloud technologies and DevOps.
                     </p>
 
                     <div class="grid-list-items s-about__blocks">
@@ -782,64 +783,88 @@
                         <div class="column xl-12">
 
 <div class="experience-card">
-    <div class="experience-header">
-        <h3 class="company-name">
-            <img src="images/sellergize.png" alt="Zifup Logo" class="company-logo">
+
+    <div class="experience-header" style="display:block;">
+
+        <img src="images/sellergize.png"
+             alt="Sellergize Logo"
+             class="company-logo"
+             style="display:block; width:250px; height:auto; margin:0 auto 18px;">
+
+        <h3 class="company-name" style="text-align:center; margin:0 0 15px;">
+            Sellergize WTS
         </h3>
-        <br>
-        <span class="position">
-            <strong>Service Engineer</strong> — Browser Scripting & Site Integration
+
+        <span class="position" style="display:block;">
+            <strong>Service Engineer</strong> — Browser Scripting &amp; Site Integration
         </span>
-        <br>
-        <span class="duration">
-            May 2026 – Present <br> Mumbai, India
+
+        <span class="duration" style="display:block; margin-top:8px;">
+            May 2026 – Present <br>
+            Mumbai, India
         </span>
+
     </div>
+
     <div class="experience-body">
+
         <p>
-            <strong>Zifup</strong> a shopping browser, owned by <strong>Sellergize WTS</strong> is built around two things: <strong>Flexbook</strong>, which
-            pulls your entire order history — order date, delivery date, status, quantity, price,
-            product name — from every store you're logged into, and puts it all in one place.
-            And <strong>Auto Apply</strong>, which hunts down coupons (ours, the web's, and the
-            site's own), tries them all on your cart one by one, and keeps whichever one actually
-            gets you the lowest price. My job is making both of these actually work, site after site.
+            <strong>Zifup</strong>, a shopping browser owned by <strong>Sellergize WTS</strong>,
+            is built around two things:
+            <strong>Flexbook</strong>, which pulls your entire order history—order date,
+            delivery date, status, quantity, price, product name—from every store you're
+            logged into, and <strong>Auto Apply</strong>, which hunts down coupons,
+            tests them, and applies the one that gives the best price.
         </p>
+
         <ul>
-            <li>Wrote and maintained per-store JavaScript scripts to extract order and pricing data from dozens of distinct e-commerce sites, customizing extraction logic to each site's unique DOM structure.</li>
-            <li>Designed resilient, semantic DOM selectors (avoiding brittle positional selectors like <code>nth-child</code>) to keep scripts stable across frequent site-side markup changes.</li>
-            <li>Handled complex frontend patterns including <strong>Shadow DOM</strong> traversal and <strong>MutationObservers</strong> to reliably extract data from dynamically rendered, JS-heavy storefronts.</li>
-            <li>Built and debugged the iterative coupon-testing logic behind Auto Apply, validating each candidate coupon against live cart/checkout state to determine the best net-price outcome.</li>
-            <li>Onboarded new stores end-to-end — <b>reverse-engineering site structure</b>, writing extraction scripts, and validating data accuracy for Flexbook.</li>
-            <li>Diagnosed and resolved script breakages caused by frontend updates on target websites, ensuring continuous uptime of scraping and coupon-application pipelines.</li>
+            <li>Wrote and maintained per-store JavaScript scripts to extract order and pricing data from dozens of e-commerce sites.</li>
+
+            <li>Designed resilient DOM selectors to survive frontend markup changes.</li>
+
+            <li>Worked with Shadow DOM, MutationObserver and dynamic storefronts.</li>
+
+            <li>Built and debugged the coupon-testing logic powering Auto Apply.</li>
+
+            <li>Onboarded new stores by reverse-engineering site structures for Flexbook.</li>
+
+            <li>Resolved extraction and coupon script failures after frontend updates.</li>
         </ul>
+
     </div>
+
 </div>
 
-                        </div>
-                    </div> <!-- end experience-entry -->
-
-                    <div class="row experience-entry" data-aos="fade-up">
-                        <div class="column xl-12">
-
 <div class="experience-card">
-    <div class="experience-header">
-        <h3 class="company-name">
+
+    <div class="experience-header" style="display:block;">
+
+        <img src="images/jio-logo.png"
+             alt="Jio Logo"
+             class="company-logo"
+             style="display:block; width:110px; height:auto; margin:0 auto 18px;">
+
+        <h3 class="company-name" style="text-align:center; margin:0 0 15px;">
             Jio Platforms Limited
-            <img src="images/jio-logo.png" alt="Jio Logo" class="company-logo">
         </h3>
 
-        <span class="position">
+        <span class="position" style="display:block;">
             <strong>Project Intern</strong> — Java Backend Development
         </span>
-        <br>
-        <span class="duration">
-            Sep – Dec 2025 <br> Navi Mumbai, India
+
+        <span class="duration" style="display:block; margin-top:8px;">
+            Sep – Dec 2025 <br>
+            Navi Mumbai, India
         </span>
+
     </div>
 
+    <!-- Experience body continues here -->
+
+</div>
     <div class="experience-body">
         <p>
-            Currently working as a <strong>Backend Developer Intern</strong> on 
+            Worked as a <strong>Backend Developer Intern</strong> on 
             <strong>Jio EVA (Authentication Tool)</strong> —
             an internal authentication and authorization service built using 
             <strong>Spring Boot</strong>.
