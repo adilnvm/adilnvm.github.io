@@ -4600,3 +4600,181 @@ td:last-child {
     height: 100%;
     object-fit: contain;
 }
+
+/* =========================================================
+   ADD-ON STYLES — Education links, Work Experience links,
+   and the split (logo-left) experience header layout.
+
+   Paste these rules into your existing styles.css.
+
+   NOTE: I could not load your real styles.css this session,
+   so the accent color below (#c1440e) is an approximation of
+   the rust/terracotta tone visible in your screenshots. If your
+   stylesheet already defines an accent variable (something like
+   --color-1 or --accent), replace every #c1440e below with that
+   variable instead, so this stays perfectly on-brand.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. EDUCATION LINKS — "quiet" tier
+   Institute name (SIES College / Maharishi Vidya Mandir /
+   St. John's School) stays visually identical to plain text
+   at rest. Only on hover/focus does it reveal itself as a link.
+   --------------------------------------------------------- */
+
+.edu-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.edu-link:hover,
+.edu-link:focus-visible {
+    color: #c1440e; /* swap for your real accent variable if different */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   2. WORK EXPERIENCE COMPANY LINKS — "medium" tier + icon
+   A faint static underline signals interactivity at rest.
+   On hover/focus the underline solidifies, the text takes the
+   accent color, and a small outward arrow (already present via
+   ::after) shifts from dim gray to the accent color too.
+   --------------------------------------------------------- */
+
+.company-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.25);
+    text-underline-offset: 4px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.company-link::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.35);
+    transition: color 0.2s ease;
+}
+
+.company-link:hover,
+.company-link:focus-visible {
+    color: #c1440e; /* swap for your real accent variable if different */
+    text-decoration-color: #c1440e;
+}
+
+.company-link:hover::after,
+.company-link:focus-visible::after {
+    color: #c1440e;
+}
+
+
+/* ---------------------------------------------------------
+   3. SPLIT EXPERIENCE HEADER — logo left, info right
+   Replaces the old centered/stacked header. Logo sits at a
+   fixed height (so Sellergize's wide logotype and Jio's square
+   mark both line up visually), company name/role/duration sit
+   in a left-aligned column beside it.
+   --------------------------------------------------------- */
+
+.experience-header--split {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experience-header--split .company-logo {
+    height: 120px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+    margin: 0 30px 0 30px;
+}
+
+.experience-header__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.experience-header__info .company-name {
+    margin: 0;
+    text-align: left;
+}
+
+.experience-header__info .position,
+.experience-header__info .duration {
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+/* Hairline divider between stacked experience cards, now that
+   they read as list entries rather than standalone banners. */
+.experience-card + .experience-card {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 32px;
+    margin-top: 32px;
+}
+
+/* Collapse back to a stacked layout on narrow screens so the
+   logo + text column don't get squeezed. */
+@media (max-width: 600px) {
+    .experience-header--split {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-header--split .company-logo {
+        margin-bottom: 10px;
+    }
+}
+
+/* ---------------------------------------------------------
+   0. AWS CREDLY BADGE GRID — fix overflow on narrow phones
+   Credly's embed script injects a fixed-size iframe (170x270)
+   into each placeholder div, regardless of viewport. On phones
+   narrower than ~360-380px, two 170px iframes + gap won't fit
+   in a 2-column grid, so one overflows its cell and the row
+   reads as "crooked." Capping the iframe's width and collapsing
+   to one column below a breakpoint fixes both problems.
+   --------------------------------------------------------- */
+ 
+.aws-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+ 
+.aws-badges-grid iframe {
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 170 / 270;
+}
+ 
+@media (max-width: 480px) {
+    div[style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        justify-items: center !important;
+    }
+
+    div[style*="grid-template-columns: repeat(2, 1fr)"] iframe {
+        width: 170px !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 170 / 270;
+    }
+}
