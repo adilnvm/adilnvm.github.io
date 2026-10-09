@@ -4805,22 +4805,7 @@ td:last-child {
 
 
 
-.social-list__img {
-    margin: 0;                     /* cancels the global img margin-bottom */
-    width: var(--vspace-0_875);    /* footer: same width as the svg icons (28px) */
-    height: auto;                  /* keeps the owl's proportions */
-    max-width: none;
-    filter: grayscale(1) opacity(.8);
-    transition: filter .2s ease;
-}
-.s-intro__social .social-list__img {
-    width: var(--vspace-0_75);     /* hero: same width as the svg icons (24px) */
-}
-@media screen and (max-width: 1200px) {
-    .s-intro__social .social-list__img {
-        width: var(--vspace-0_625);
-    }
-}
+
 
 :root {
     --social-scale: 1.40;   /* 1.10 = +10%, 1.15 = +15% */
