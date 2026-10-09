@@ -4823,7 +4823,7 @@ td:last-child {
 }
 
 :root {
-    --social-scale: 1.125;   /* 1.10 = +10%, 1.15 = +15% */
+    --social-scale: 1.40;   /* 1.10 = +10%, 1.15 = +15% */
 }
 
 /* footer (and default) */
