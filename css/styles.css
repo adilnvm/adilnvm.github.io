@@ -4830,6 +4830,9 @@ td:last-child {
 }
 .s-intro__social .social-list__img {
     width: calc(var(--vspace-0_75) * var(--social-scale));
+    height: calc(var(--vspace-0_75) * var(--social-scale));
+    object-fit: contain;
+    display: block;
 }
 
 /* hero at <= 1200px (mirrors your existing breakpoint rule) */
@@ -4840,5 +4843,6 @@ td:last-child {
     }
     .s-intro__social .social-list__img {
         width: calc(var(--vspace-0_625) * var(--social-scale));
+        height: calc(var(--vspace-0_625) * var(--social-scale));
     }
 }
