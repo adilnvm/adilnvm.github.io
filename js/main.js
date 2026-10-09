@@ -18,7 +18,12 @@
 
         html.classList.add('ss-preload');
         
-        window.addEventListener('load', function() {
+        let revealed = false;
+
+        const reveal = function() {
+            if (revealed) return;
+            revealed = true;
+
             html.classList.remove('ss-preload');
             html.classList.add('ss-loaded');
             
@@ -29,7 +34,12 @@
                     preloader.removeEventListener(e.type, afterTransition);
                 }
             });
-        });
+        };
+
+        window.addEventListener('load', reveal);
+
+        // safety net: never keep visitor on spinner longer than 4s (slow networks)
+        setTimeout(reveal, 4000);
 
     }; // end ssPreloader
 

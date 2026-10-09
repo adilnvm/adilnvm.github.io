@@ -4778,3 +4778,82 @@ td:last-child {
         aspect-ratio: 170 / 270;
     }
 }
+
+/* ---------------------------------------------------------
+   BADGES & CERTIFICATES LINKS — same hover as .edu-link
+   --------------------------------------------------------- */
+   .badge-link,
+   .badge-link p {
+       cursor: pointer;
+       transition: color 0.2s ease;
+   }
+   
+   .badge-link:hover,
+   .badge-link:focus-visible {
+       color: #c1440e !important;
+       /* text-decoration: underline !important; */
+       text-underline-offset: 3px;
+   }
+   
+   /* card titles have their own inline colour (#333), so target them directly */
+   .badge-link:hover p,
+   .badge-link:focus-visible p {
+       color: #c1440e !important;
+       text-decoration: underline;
+       text-underline-offset: 3px;
+   }
+
+
+
+.social-list__img {
+    margin: 0;                     /* cancels the global img margin-bottom */
+    width: var(--vspace-0_875);    /* footer: same width as the svg icons (28px) */
+    height: auto;                  /* keeps the owl's proportions */
+    max-width: none;
+    filter: grayscale(1) opacity(.8);
+    transition: filter .2s ease;
+}
+.s-intro__social .social-list__img {
+    width: var(--vspace-0_75);     /* hero: same width as the svg icons (24px) */
+}
+@media screen and (max-width: 1200px) {
+    .s-intro__social .social-list__img {
+        width: var(--vspace-0_625);
+    }
+}
+
+:root {
+    --social-scale: 1.125;   /* 1.10 = +10%, 1.15 = +15% */
+}
+
+/* footer (and default) */
+.social-list svg {
+    height: calc(var(--vspace-0_875) * var(--social-scale));
+    width : calc(var(--vspace-0_875) * var(--social-scale));
+}
+.social-list__img {
+    margin: 0;
+    width: calc(var(--vspace-0_875) * var(--social-scale));
+    height: auto;
+    max-width: none;
+}
+
+/* hero */
+.s-intro__social svg {
+    height: calc(var(--vspace-0_75) * var(--social-scale));
+    width : calc(var(--vspace-0_75) * var(--social-scale));
+}
+.s-intro__social .social-list__img {
+    width: calc(var(--vspace-0_75) * var(--social-scale));
+}
+
+/* hero at <= 1200px (mirrors your existing breakpoint rule) */
+@media screen and (max-width: 1200px) {
+    .s-intro__social svg {
+        height: calc(var(--vspace-0_625) * var(--social-scale));
+        width : calc(var(--vspace-0_625) * var(--social-scale));
+    }
+    .s-intro__social .social-list__img {
+        width: calc(var(--vspace-0_625) * var(--social-scale));
+    }
+}
